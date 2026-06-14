@@ -1,13 +1,45 @@
-NoiseForge
-O projekcie
-NoiseForge to zaawansowana platforma służąca do celowego generowania kontrolowanego szumu informacyjnego. Głównym celem oprogramowania jest symulowanie zmasowanych zdarzeń bezpieczeństwa, co pozwala na rygorystyczne testowanie odporności i wydajności systemów detekcji zagrożeń w środowiskach docelowych.
-Architektura Systemu
-Platforma opiera się na pięciu głównych modułach operacyjnych, z których każdy realizuje ściśle określony etap działań ofensywnych i analitycznych:
-•	Moduł Zbierania Danych – odpowiada za precyzyjną agregację oraz normalizację wejściowych logów systemowych, adresów IP i zdarzeń.
-•	Moduł Analizy i Rekonesansu – szczegółowo przetwarza zebrane informacje metodami OSINT, wykrywając w nich anomalie oraz rzetelnie klasyfikując zidentyfikowane zagrożenia.
-•	Moduł Decyzyjny – pełni centralną rolę, odpowiadając za autoryzację oraz podjęcie ostatecznej decyzji o uruchomieniu i skali symulowanej kampanii.
-•	Moduł Realizacji Działań – fizycznie generuje kontrolowany szum na wyznaczone cele, wykorzystując zaawansowane techniki, takie jak symulowane ataki DDoS w warstwie aplikacji (L7) oraz zmasowany ruch sieciowy.
-•	Moduł Raportowania i Monitoringu – bezustannie nadzoruje proces operacyjny, chroni przed przeciążeniem własnych zasobów i na bieżąco generuje metryki skuteczności.
-Technologie i Bezpieczeństwo
-Pod kątem technologicznym platforma opiera się na nowoczesnych, skalowalnych rozwiązaniach. Wykorzystuje potężną infrastrukturę chmurową, środowisko kontenerowe Docker oraz system orkiestracji Kubernetes, co zapewnia wysoką wydajność generowanego ruchu.
-Aby zagwarantować bezpieczeństwo użycia tak potężnego narzędzia i uniknąć jego niekontrolowanego użycia, system wdraża rygorystyczne zabezpieczenia. Obejmują one między innymi ścisłą izolację środowiska testowego, tunelowanie ruchu, mechanizmy awaryjnego przerywania operacji ("Kill Switch") oraz pełną zgodność ze standardem OWASP ASVS na poziomie 3.
+<h1 align="center">NoiseForge Cyber System 🛡️</h1>
+
+<div align="center">
+<i>Zaawansowana platforma do generowania kontrolowanego szumu informacyjnego i symulacji cyberzagrożeń.</i>
+</div>
+
+🎯 O projekcie
+
+NoiseForge to zautomatyzowane oprogramowanie zaprojektowane w celu symulowania zmasowanych zdarzeń bezpieczeństwa. Platforma pozwala na rygorystyczne testowanie odporności i wydajności systemów detekcji zagrożeń (klasy SIEM/SOC) w środowiskach docelowych, poprzez wstrzykiwanie kontrolowanego, realistycznego obciążenia sieciowego.
+
+🏗️ Architektura Systemu
+
+Platforma opiera się na 5-stopniowej, modułowej architekturze, która gwarantuje pełną kontrolę nad każdą fazą operacji badawczej:
+
+• 📥 Moduł Zbierania Danych – precyzyjna agregacja i normalizacja logów systemowych, adresów IP oraz wejściowych zdarzeń.
+
+• 🔍 Moduł Analizy i Rekonesansu – analiza zebranych informacji (OSINT), wykrywanie anomalii i klasyfikacja podatności.
+
+• 🧠 Moduł Decyzyjny – centralny węzeł autoryzacyjny podejmujący ostateczną decyzję o uruchomieniu i skali kampanii.
+
+• ⚡ Moduł Realizacji Działań – fizyczne generowanie kontrolowanego szumu (m.in. symulowane ataki obciążeniowe DDoS w warstwie L7).
+
+• 📊 Moduł Raportowania i Monitoringu – ciągły nadzór operacyjny, logowanie audytowe i generowanie końcowych metryk skuteczności.
+
+⚙️ Stos Technologiczny
+
+System został zbudowany w oparciu o wysoce wydajne i skalowalne technologie rozproszone:
+
+• Chmura i Orkiestracja: AWS / Azure / GCP, Kubernetes (K8s), Docker
+
+• Sieć i Dystrybucja: Nginx (Load Balancing)
+
+• Silniki i Narzędzia: Python, Apache Spark, Scapy, Custom Scripts
+
+• Warstwa Danych: PostgreSQL, Elasticsearch (Data Lake)
+
+🔒 Bezpieczeństwo i Izolacja
+
+Ze względu na wysoce inwazyjny charakter platformy, zaimplementowano krytyczne mechanizmy zabezpieczające przed niekontrolowanym rozprzestrzenieniem ruchu:
+
+• 🛑 Kill Switch – wielopoziomowy, awaryjny mechanizm natychmiastowego przerwania operacji przy zmianie statusu celu.
+
+• 🛡️ Zgodność – pełna implementacja wymagań standardu OWASP ASVS (Poziom 3).
+
+• 🔐 Izolacja Sieciowa – tunelowanie ruchu (TLS/VPN) wymuszające działanie wyłącznie w granicach zatwierdzonych Rules of Engagement.
